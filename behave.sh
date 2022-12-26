@@ -6,19 +6,24 @@ python_install()
        if [ $? -ne 0 ]; then
                 echo "error while installing behave"
        fi
-        echo "python installed successfully"
+       echo "python installed successfully"
 }
 behave_install()
 {
        sudo apt install python3-behave
-        if [ $? -ne 0 ]; then
+       if [ $? -ne 0 ]; then
                 echo "error while installing behave"
-        fi
-        echo "behave installed successfully"
+       fi
+       echo "behave installed successfully"
 }
 cleanup_workspace()
 {
-sudo rm -r /var/lib/jenkins/workspace/testbehave/features
+       echo "removing old beahve files"
+       sudo rm -r /var/lib/jenkins/workspace/testbehave/features
+       if [ $? -ne 0 ]; then
+                echo "error while removing behave files"
+       fi
+       echo "behave files removed successfully"
 }
 behave_steps()
 {
