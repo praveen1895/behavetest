@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "steps to run BDD"
-mkdir -p /home/ubunut/feat/steps
+sudo mkdir -p /home/ubuntu/feat/steps
