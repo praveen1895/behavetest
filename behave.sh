@@ -16,6 +16,10 @@ behave_install()
         fi
         echo "behave installed successfully"
 }
+cleanup_workspace()
+{
+sudo rm -r /var/lib/jenkins/workspace/testbehave/features
+}
 behave_steps()
 {
         echo "steps to run BDD"
