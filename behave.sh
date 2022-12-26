@@ -11,9 +11,9 @@ behave_install()
 behave_steps()
 {
         echo "steps to run BDD"
-        sudo mkdir -p /home/ubuntu/features/steps
-        sudo cp -r ./test.feature /home/ubuntu/features
-        sudo cp -r ./test.py /home/ubuntu/features/steps
+        sudo mkdir -p /var/lib/jenkins/workspace/testbehave/features/steps
+        sudo cp -r ./test.feature /var/lib/jenkins/workspace/testbehave/features
+        sudo cp -r ./test.py /var/lib/jenkins/workspace/testbehave/features/steps
         behave
 }
 behave_install
