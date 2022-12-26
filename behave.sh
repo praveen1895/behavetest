@@ -1,17 +1,8 @@
 #!/bin/bash
 echo "installing behave"
-pip_install()
-{
-        sudo apt-get update
-        sudo apt install python3-pip -y
-        if [ $? -ne 0 ]; then
-                echo "error while installing pip"
-        fi
-        echo "pip installed successfully"
-}
 behave_install()
 {
-        pip install behave
+       sudo apt install python3-behave
         if [ $? -ne 0 ]; then
                 echo "error while installing behave"
         fi
@@ -25,6 +16,5 @@ behave_steps()
         sudo cp -r ./test.py /home/ubuntu/features/steps
         behave
 }
-pip_install
 behave_install
 behave_steps
