@@ -1,5 +1,13 @@
 #!/bin/bash
 echo "installing behave"
+python_install()
+{
+       sudo apt install python3
+       if [ $? -ne 0 ]; then
+                echo "error while installing behave"
+       fi
+        echo "python installed successfully"
+}
 behave_install()
 {
        sudo apt install python3-behave
@@ -16,5 +24,6 @@ behave_steps()
         sudo cp -r ./test.py /var/lib/jenkins/workspace/testbehave/features/steps
         behave
 }
+python_install
 behave_install
 behave_steps
